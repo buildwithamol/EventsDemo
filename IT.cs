@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EventsDemo
+﻿namespace EventsDemo
 {
     public class IT
     {
@@ -16,7 +12,7 @@ namespace EventsDemo
 
         }
 
-       public void EmployeeSeperatedEventHandler()
+       public void EmployeeSeperatedEventHandler(object sender, EventArgs e)
         {
             Console.WriteLine("IT department notified of employee separation.");
         }

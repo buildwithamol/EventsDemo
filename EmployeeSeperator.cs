@@ -6,8 +6,8 @@ namespace EventsDemo
 {
     public class EmployeeSeperator
     {
-        public delegate void EmployeeSeperatedEventHandler(); //Delegate to define the signature of the event handler method
-        public event EmployeeSeperatedEventHandler? EmployeeSeperated; //Event to notify subscribers when an employee is separated
+        //public delegate void EmployeeSeperatedEventHandler(); //Delegate to define the signature of the event handler method
+        public event EventHandler? EmployeeSeperated; //Event to notify subscribers when an employee is separated
 
 
         /// <summary>
@@ -16,7 +16,7 @@ namespace EventsDemo
         /// </summary>
         public void SeperatorNotify()
         {
-            EmployeeSeperated?.Invoke(); //Publish Event to all subscribers
+            EmployeeSeperated?.Invoke(this, EventArgs.Empty); //Publish Event to all subscribers
 
         }
     }

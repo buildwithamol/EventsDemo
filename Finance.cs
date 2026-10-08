@@ -10,7 +10,7 @@
             employeeSeperator.EmployeeSeperated += EmployeeSeperatedEventHandler;
         }
 
-        public void EmployeeSeperatedEventHandler()
+        public void EmployeeSeperatedEventHandler(object sender, EventArgs e)
         {
             Console.WriteLine("Finance department notified of employee separation.");
         }
